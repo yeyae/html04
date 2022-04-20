@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var x = 1;
+      /* x 로 어떤 작업 */
+      var x = 2; // 기존 변수 x 제거
+      /* 이 전에 하던 x로 하던 어떤 작업을 이어서 할수가 없게됨. */
+
+      //let y = 1;
+      //let y = 2; // let은 재선언 불가능!!!
+      //console.log(y);
+
+      /* const 상수 : 변하지않는 값을 가진다.*/
+      const MAX = 100;
+      //MAX = 50; //오류 발생 ! 이미 선언된 상수에 값을 재할당 하려고 한다.
+      if (true) {
+        const MIN = 10;
+      }
+      //console.log(MIN); //오류 발생! const 라는 친구는 선언된 블록 내에서만 사용이 가능
+      //const MAX = 50; //오류 발생! 이미 선언된 상수를 다시 선언할 수 없다.
+    </script>
+  </head>
+  <body></body>
+</html>

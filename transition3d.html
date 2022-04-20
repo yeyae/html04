@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="prefixfree.min.js"></script>
+    <style>
+      body {
+        width: 200px;
+        margin: 200px auto;
+        /*원근법 적용하는 속성*/
+        perspective: 400pt;
+      }
+
+      section {
+        width: 200px;
+        height: 200px;
+        position: relative; /*자식 태그의 position 속성 absolute*/
+        animation: rint 3s linear 0s infinite;
+
+        /* 후손의 3차원 속성을 무시할지 유지할지 설정하는 방법 */
+        transform-style: preserve-3d;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        /* 3차원 공간에서 후면을 보이게 하거나 보이지 않게 하는 속성*/
+        backface-visibility: visible;
+        opacity: 0.2; /*투명도*/
+      }
+      /*옆면*/
+      div:nth-child(1) {
+        transform: rotateY(0deg) translate3d(0px, 0px, 100px);
+        background: red;
+      }
+      div:nth-child(2) {
+        transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+        background: green;
+      }
+      div:nth-child(3) {
+        transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+        background: blue;
+      }
+      div:nth-child(4) {
+        transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+        background: yellow;
+      }
+      /* 윗면과 아랫면 */
+      div:nth-child(5) {
+        transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+        background: brown;
+      }
+      div:nth-child(6) {
+        transform: rotateX(270deg) translate3d(0px, 0px, 100px);
+        background: pink;
+      }
+      @keyframes rint {
+        from {
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        to {
+          transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>

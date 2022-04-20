@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>산술 연산</title>
+    <script>
+      let x = 32;
+      let total = 100 + (x * 2) / 4 - 3;
+      let div = x / 10;
+      let mod = x % 2;
+
+      //document.write() => html 문서를 작성하는 것처럼 해주는 기능
+      document.write("<h1>x :" + x + "</h1><br><br>");
+      document.write("100 + (x * 2) / 4 - 3 = " + total + "<br>");
+      document.write("x/10 = " + div + "<br>");
+      document.write("x % 2 = " + mod + "<br>");
+
+      /* 증감 연산자 */
+      let a = 1;
+      document.write(a++ + "<br>"); // a값 1증가, a는 2가 된다. ++ 연산자가 뒤에오면 a를 1증가시키고 증가되기 전 값.
+      //a를먼저 사용한 후에 증가
+      document.write(++a); // a값 1증가, a는 3이 된다. ++ 연사자가 앞에오면 a를 먼저 사용하고 1증가.
+
+      /* 대입 연산 = += -= *= /= %= 
+        a = b : b값을 a에 대입
+        a += b : a = a + b 와 같음
+        a -= b : a = a - b 와 같음
+        a *= b : a = a * b 와 같음
+        a /= b : a = a / b 와 같음
+        a %= b : a = a % b 와 같음
+      */
+
+      /* 비교 연산 
+        a < b  : a가 b 보다 작으면 true ( a 가 b보다 크거나 같으면 false )
+        a > b  : a가 b 보다 크면 true ( a 가 b보다 작거나 같으면 false )
+        a <= b : a가 b보다 작거나 같으면 true ( a가 b보다 크면 false)
+        a >= b : a가 b보다 크거나 같으면 true ( a가 b보다 작으면 false)
+        a == b : a와 b가 같으면 true ( 다르면 false)
+        a != b : a와 b가 다르면 true ( 같으면 false)
+        a === b : a와 b의 값을 비교하는데, 데이터의 타입까지 같아야 true (엄격한 비교)
+        a !== b : a와 b의 값을 비교하는데, 데이터의 타입도 비교.
+        a와 b의 값이 같고 데이터의 타입이 다름 a !== b : true
+        a와 b의 값이 같고 데이터의 타입이 같음 a !== b : false
+        a와 b의 값이 다르면 => a !== b : true
+      */
+      let a1 = 13;
+      let a2 = "13";
+      document.write("<br>");
+      document.write("a1 === a2 = ? <br>");
+      document.write(a1 === a2);
+      document.write("<br>");
+      document.write("a1 == a2 = ? <br>");
+      document.write(a1 == a2);
+      let b1 = 3;
+      let b2 = "3";
+      document.write("<br>");
+      document.write("b1 !== b2 = ? <br>");
+      document.write(b1 !== b2);
+      document.write("<br>");
+      document.write("b1 != b2 = ? <br>");
+      document.write(b1 != b2);
+    </script>
+  </head>
+  <body></body>
+</html>

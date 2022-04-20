@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 논리 연산
+             a && b : a 와 b 가 모두 true일 경우 true 반환
+             a || b : a 와 b 중 하나라도 true 면 true 반환
+             !a : a 가 true 이면 false, a 가 false 이면 true
+         */
+      //   let a = 3 > 2; // true
+      //   let b = 3 > 4; // false
+
+      //   document.write("a = " + a);
+      //   document.write("<br>");
+      //   document.write("b = " + b);
+      //   document.write("<br>");
+      //   document.write("a && b = " + (a && b) + "<br>");
+      //   document.write("a || b = " + (a || b) + "<br>");
+      //   document.write("!a = " + !a + "<br>");
+
+      //   let x = 3;
+      //   let y = 5;
+      //   let big = x > y ? x : y; // ( 식 ) ? 값1 : 값2 => 식이 true면 값1, false면 값2
+      //   document.write(big);
+
+      /* 비트 연산
+
+         a & b : 비트 AND 연산 => 두 비트 모두 1이면 1, 그렇지 않으면 0
+         a | b : 비트 OR 연산 => 두 비트중 하나라도 1이면 1, 그렇지 않으면 0
+         a ^ b : 비트 XOR 연산 => 두 비트가 다르면 1, 같으면 0
+         ~ a : 비트 NOT 연산 => 1 을 0으로, 0 을 1로 변환
+       */
+      let a = 106;
+      let b = 77;
+      document.write(" a = &nbsp&nbsp&nbsp&nbsp" + a.toString(2) + "<br>");
+      document.write(" b = &nbsp&nbsp&nbsp&nbsp" + b.toString(2) + "<br>");
+      document.write("-------------------<br>");
+      document.write("a & b = " + (a & b).toString(2) + "<br>");
+      document.write("a | b = " + (a | b).toString(2) + "<br>");
+      document.write("a ^ b = " + (a ^ b).toString(2) + "<br>");
+      document.write(" ~a = " + (~a).toString(2) + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

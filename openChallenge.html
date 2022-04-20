@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function printStar() {
+        let n = prompt("정수를 입력하세요. ");
+        n = parseInt(n);
+        if (typeof n == "number") {
+          for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+              document.write("*");
+            }
+            document.write("<br>");
+          }
+        } else {
+          document.write("입력 오류 입니다.");
+        }
+
+        // if (isNaN(n)) {
+        //   document.write("입력 오류 입니다.");
+        // } else {
+        //   for (let i = 1; i <= n; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //       document.write("*");
+        //     }
+        //     document.write("<br>");
+        //   }
+        //}
+      }
+      let val = eval("2+12*8-20/7");
+      console.log(val);
+    </script>
+  </head>
+  <body>
+    <h1>별 문자 출력하기</h1>
+    <hr />
+    <script>
+      printStar();
+    </script>
+  </body>
+</html>
